@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pruebaApi.MainPage">
+    <StackLayout>
+        <Label Text="Litas de Fechas de temperatura" FontSize="Title" Padding="30,10,30,10" />
+        <Button Text="Llamar API" 
+                Clicked="Button_Clicked"/>
+        <ListView x:Name="ListaTemperatura">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding date}" Detail="{Binding temperatureC}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
